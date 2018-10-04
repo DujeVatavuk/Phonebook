@@ -16,13 +16,19 @@ using System.Windows.Shapes;
 namespace Phonebook
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for NavigationPage.xaml
     /// </summary>
-    public partial class MainWindow : NavigationWindow
+    public partial class NavigationPage : Page
     {
-        public MainWindow()
+        public NavigationPage()
         {
             InitializeComponent();
+        }
+
+        private void Button1_Click(object sender, RoutedEventArgs e)
+        {
+            Details details = new Details();
+            this.NavigationService.Navigate(details);
         }
     }
 }
